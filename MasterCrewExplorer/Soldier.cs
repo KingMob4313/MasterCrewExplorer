@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MasterCrewExplorer
 {
-    class Soldier : Person
+    abstract class Soldier : Person
     {
         private int Health;
         private int Accuracy;

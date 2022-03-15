@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MasterCrewExplorer
 {
-    class Adventurer : Person
+    abstract class Adventurer : Person
     {
         private int HitPoints;
         private int ClassId;

@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace MasterCrewExplorer
 {
-    class Athlete: Person
+    abstract class Athlete: Person
     {
         private int sportID;
         private string position;
-        //Salary Range 
-
+        private int speed;
+        private int consistency;
+        //Salary Range 0-10
+        private int salary;
     }
 }
