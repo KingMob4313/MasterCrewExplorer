@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DnD35Character.cs" />
+    <Compile Include="DnD5thCharacter.cs" />
+    <Compile Include="DnDBasicsCharacter.cs" />
     <Compile Include="Soldier.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

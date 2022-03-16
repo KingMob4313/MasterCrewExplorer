@@ -8,7 +8,12 @@ namespace MasterCrewExplorer
 {
     abstract class Adventurer : Person
     {
-        private int HitPoints;
-        private int ClassId;
+        private int hitPoints;
+        private int classId;
+        private int experience;
+
+        public int HitPoints { get => hitPoints; set => hitPoints = value; }
+        public int ClassId { get => classId; set => classId = value; }
+        public int Experience { get => experience; set => experience = value; }
     }
 }
