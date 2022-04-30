@@ -9,11 +9,12 @@ namespace MasterCrewExplorer
 {
     class MasterClassController
     {
-        object GetMasterCrewData(string url)
+        public object GetMasterCrewData(string url)
         {
             string jsonData = GetJsonData(url);
-
-            return new object();
+            MasterCrewParser mcp = new MasterCrewParser();
+            var xxx = mcp.taco(jsonData);
+            return xxx;
         }
 
         private static string GetJsonData(string url)
