@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace MasterCrewExplorer
 {
@@ -7,7 +8,8 @@ namespace MasterCrewExplorer
         //Need to divide the json objects into individual lists of objects
         public dynamic taco(string jsonString)
         {
-            dynamic burrito = JsonConvert.DeserializeObject(jsonString);
+            var burrito = JsonConvert.DeserializeObject(jsonString);
+            
             return burrito;
         }
     }

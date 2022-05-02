@@ -33,7 +33,7 @@ namespace MasterCrewExplorer
             string xxx = ax.Get("MasterDataSet");
             MasterClassController mcc = new MasterClassController();
             var crewObject = mcc.GetMasterCrewData(xxx);
-            
+            //string xyz = crewObject
         }
     }
 }

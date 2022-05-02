@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="689,10,0,0" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" x:Name="tempTextBlock" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="19,14,0,0" Height="168" Width="647"/>
 
     </Grid>
 </Window>
