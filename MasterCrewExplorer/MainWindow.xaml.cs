@@ -29,10 +29,8 @@ namespace MasterCrewExplorer
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //Ugh move this
-            var ax = ConfigurationManager.AppSettings;
-            string xxx = ax.Get("MasterDataSet");
             MasterClassController mcc = new MasterClassController();
-            var crewObject = mcc.GetMasterCrewData(xxx);
+            var crewObject = mcc.GetMasterCrewData();
             //string xyz = crewObject
         }
     }

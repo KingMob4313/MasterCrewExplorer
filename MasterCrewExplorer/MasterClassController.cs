@@ -1,22 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
 
 namespace MasterCrewExplorer
 {
     class MasterClassController
     {
-        public object GetMasterCrewData(string url)
+        public List<DnDBasicsCharacter> currentDnDList = new List<DnDBasicsCharacter>();
+        public object GetMasterCrewData()
         {
-            string jsonData = GetJsonData(url);
-            MasterCrewParser mcp = new MasterCrewParser();
-            var xxx = mcp.taco(jsonData);
-            return xxx;
+            currentDnDList = GetDnDData(new List<DnDBasicsCharacter>());
+            return new object();
         }
 
+        private static List<DnDBasicsCharacter> GetDnDData(List<DnDBasicsCharacter> currentDnDList)
+        {
+            var ax = ConfigurationManager.AppSettings;
+            string prefixDataUrl = ax.Get("MasterDataSetPrefix");
+            string suffixDataUrl = ax.Get("DnDDataSetSuffix");
+            string fullUrl = prefixDataUrl + suffixDataUrl;
+            string jsondata = GetJsonData(fullUrl);
+            return currentDnDList;
+        }
         private static string GetJsonData(string url)
         {
             using (WebClient currentWebClient = new WebClient())
