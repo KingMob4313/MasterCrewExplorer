@@ -15,11 +15,15 @@ namespace MasterCrewExplorer
 
         private static List<DnDBasicsCharacter> GetDnDData(List<DnDBasicsCharacter> currentDnDList)
         {
-            var ax = ConfigurationManager.AppSettings;
-            string prefixDataUrl = ax.Get("MasterDataSetPrefix");
-            string suffixDataUrl = ax.Get("DnDDataSetSuffix");
-            string fullUrl = prefixDataUrl + suffixDataUrl;
-            string jsondata = GetJsonData(fullUrl);
+            MasterCrewParser mcp = new MasterCrewParser();
+
+            var currentConfig = ConfigurationManager.AppSettings;
+            string prefixDataUrl = currentConfig.Get("MasterDataSetPrefix");
+            string suffixDataUrl = currentConfig.Get("DnDDataSetSuffix");
+            string fullUrl = string.Format(prefixDataUrl, suffixDataUrl);
+            string jsonData = GetJsonData(fullUrl);
+            object taco = mcp.ParseJsonToDataList(jsonData, new DnD5thCharacter());
+
             return currentDnDList;
         }
         private static string GetJsonData(string url)
