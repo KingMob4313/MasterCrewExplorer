@@ -7,8 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="689,10,0,0" Click="Button_Click"/>
-        <TextBlock HorizontalAlignment="Left" x:Name="tempTextBlock" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="19,14,0,0" Height="168" Width="647"/>
+        <Button Content="ProcessFile" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="682,51,0,0" Click="Button_Click" Height="30"/>
+        <TextBlock HorizontalAlignment="Left" x:Name="tempTextBlock" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="10,241,0,0" Height="168" Width="647"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" x:Name="FileLocationTextBox" Text="FileLocation" VerticalAlignment="Top" Width="678" IsReadOnly="True" Margin="10,10,0,0"/>
+        <Button Content="Load File" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="707,13,0,0" Click="LoadFileButton_Click"/>
+        <CheckBox Content="Use Repository" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="578,59,0,0" Checked="CheckBox_Checked"/>
 
     </Grid>
 </Window>

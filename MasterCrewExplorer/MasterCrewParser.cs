@@ -16,8 +16,8 @@ namespace MasterCrewExplorer
 
         public DnD5thCharacter ParseJsonToDataList(string jsonString, DnD5thCharacter currentDnDCharacter)
         {
-            object xyz = JsonConvert.DeserializeObject(jsonString, typeof(List<DnD5thCharacter>));
-
+            //var xyz = JsonConvert.DeserializeObject(jsonString, typeof));
+            var abc = JsonConvert.DeserializeObject<List<DnD5thCharacter>>(jsonString);
             return currentDnDCharacter;
         }
     }
