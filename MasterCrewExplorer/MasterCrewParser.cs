@@ -12,16 +12,20 @@ namespace MasterCrewExplorer
             throw new NotImplementedException();
         }
 
-        public DnD5thCharacter ParseJsonToDataList(string jsonString, DnD5thCharacter currentDnDCharacter)
+        public List<DnD5thCharacter> ParseJsonToDataList(string jsonString)
         {
             DnD35Character currentC = new DnD35Character();
-            //var xyz = JsonConvert.DeserializeObject(jsonString);
+
             var jss = new JavaScriptSerializer();
-            List<DnD5thCharacter> results = jss.Deserialize<List<DnD5thCharacter>>(jsonString);
+            var results = jss.Deserialize<List<DnD5thCharacter>>(jsonString);
 
-            //Jesus Christ
+            //Cleanup data and only pass back valid characters
+            foreach(DnD5thCharacter currentCharacter in results)
+            {
 
-            return currentDnDCharacter;
+            }
+
+            return results;
         }
     }
 }
